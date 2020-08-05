@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Rental{% endblock %}
+
+{% block body %}
+<div class="container container-fluid mb-4">
+<h2 class="page-header mt-4"> Create New Equipment </h2>
+<br>
+    {{ include('rental/_form.html.twig') }}
+
+    <a href="{{ path('rental_index') }}">back to list</a>
+</div>
+{% endblock %}

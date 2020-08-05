@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rental Home{% endblock %}
+
+{% block body %}
+
+<div class="container container-fluid mb-4">
+<h2 class="page-header mt-4"> Our Cleaning Machines </h2>
+<div class="row mt-4">
+
+{% for rental in rentals %}
+<div class="col-sm-12 col-md-6 col-lg-3 pl-2 my-3">
+        <div class="card px-4">
+        <img src="{{ rental.Image }}" class="card-img-top" alt="">
+            <div class="card-body">
+            <a href="{{ path('rental_show', {'id': rental.id}) }}" <h5 class="card-title">{{ rental.Name }}</h5></a>
+            <p>{{rental.Date ? rental.Date|date('F j, Y, g:i a')}}</p>
+            {# <a href="{{ path('rental_show', {'id': rental.id}) }}" class="btn btn-success">Show</a> #}
+            <a href="{{ path('rental_edit', {'id': rental.id}) }}" class="btn btn-warning">Edit</a>
+            <a href="{{ path('rental_delete', {'id': rental.id}) }}" class="btn btn-danger">Delete</a>  
+            </div>
+        </div>
+</div>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+
+</div>
+</div>
+
+{% endblock %}
+

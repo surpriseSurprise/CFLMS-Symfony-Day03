@@ -1,0 +1,40 @@
+.jumbotron {
+    background: url("../img/cleaner.jpeg");
+    object-fit: cover;
+}
+
+
+input  {
+    width: 55vw;
+}
+
+input, select {
+    margin-left: 1vw;
+}
+
+ 
+.btn {
+    background-color: #343A40;
+    /* width: 7vw; */
+    border: none;
+    margin: 0.5vh;
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 12px;
+    text-decoration:none;
+}
+.tw {
+    min-width: 12vw;
+}
+.pw {
+    min-width: 8vw;
+}
+ 
+footer {
+    background-color: black !important;
+}
